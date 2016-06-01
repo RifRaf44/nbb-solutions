@@ -63,7 +63,7 @@
         // (hint: this function has one or more arguments)
             var bool = false, i;
             for(i = 1; i < arguments.length ; i++){
-                bool = arguments[i].toString() in object;
+                bool = bool && arguments[i].toString() in object;
             }
             
             return bool;
@@ -81,7 +81,7 @@
 
     console.log(neemspees.reflection.functionName(obj.sum))	// => "add"
     console.log(neemspees.reflection.hasProperty(obj, "x"))	// => true
-    console.log(neemspees.reflection.hasProperties(obj, "x", "sum", "y")) // => true
+    console.log(neemspees.reflection.hasProperties(obj, "z", "x", "sum", "y")) // => true
 
     
     
